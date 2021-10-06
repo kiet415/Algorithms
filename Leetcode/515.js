@@ -5,7 +5,25 @@ Given the root of a binary tree, return an array of the largest value in each ro
  */
 
 var largestValues = function(root) {
-    let arr = [];
+    let res = [];
+    if(!root) return [];
+    let stack = [[root,0]];
+    while(stack.length){
+        
+        let idx = stack.shift();
+        //console.log(idx)
+        let node = idx[0];
+        let level = idx[1];
+        res[level] !== undefined ? res[level] = Math.max(res[level], node.val) : res[level] = node.val;
+        if(node.left) stack.push([node.left,level+1]);
+        if(node.right)stack.push([node.right,level+1]);
+    }
+    
+    return res;
+};
+
+/** DFS WAY
+let arr = [];
     let ans = [];
     function dfs(node,level) {
         if(!node) return;
@@ -24,4 +42,4 @@ var largestValues = function(root) {
         ans.push(max);
     }
     return ans;
-};
+*/
