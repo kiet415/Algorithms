@@ -20,3 +20,5 @@ function itemsSort(items) {
     }
     return res;
 }
+let items = [4,5,6,5,4,3];
+console.log(itemsSort(items));
