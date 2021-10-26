@@ -149,8 +149,22 @@
 // console.log(name_match6(known_aliases7, 'Capone Alphonse Gabriel'))// => False
 // console.log(name_match6(known_aliases7, 'Capone Gabriel'))// => False
 
-
-
+/**
+ * function
+ *  parse through knownNames
+ *      check exact name RETURN TRUE
+ *      check if not same length
+ *          have variables with shorter/longer 
+ *          check if same first/last name with middle name missing
+ *          longername.shift then check if === bc could be tranposed
+ *      check if same length
+ *          check first + last name
+ *              have var with middleInitial, middle name
+ *              check if middleName === mdidleInitial return true
+ *          first + last name dont equal
+ *              check if first and middle name are tranposed return true;
+ *   return false
+ */
 
 function name_match(knownNames, name) {
     for(let i = 0; i < knownNames.length; i++) {
