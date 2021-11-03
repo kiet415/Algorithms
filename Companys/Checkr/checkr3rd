@@ -1,0 +1,56 @@
+PART 1  object design
+ALREADY EXISTING FEATURE FOR CHECKR
+
+eco system with a new feature to implement
+focus on domain modeling 
+what objects would be useful to solve problem
+what are the atrtributes and how they relate and how they in existing systems
+flexible approach is good here
+write pseudocode to show how itll help implement this feature
+miro.com to help
+
+motor vehicle report search
+
+phase 1 simple rules 
+data schema and objects to easily approve/report data
+
+phase 2 compound rules implement on first schema 
+binary tree?? (huh)
+very encouraged to ask and question
+
+
+
+PART 2 refactoring  actual coding time limit
+time constraint, and make sure prioritize most beneficial refactor and see how much itll take you
+
+PART 3  API design actual coding time limit
+build out  an API that serves data that theyll provide at the start of the interview
+use any language and framework
+prepare by this interview by keeping ur computer updated and datastore. have own boiler code.
+
+
+PART 4. Architecture whitebording TECHNICAL discussion
+Use miro.com
+
+Giving a partial picture of Checkr's architecture and ask to design the rest.
+
+We like to hear the thought process about certain choices.
+think about things like how uesrs will interact with product to order background checks.
+what behaviors do they expect after ordering
+how the product will need to interact with vendors who provide backgronud checks
+
+how to make sure this system is reliable.
+wont have time to get through everything and will ask questions to dive deeper into parts as you go.
+
+TYPICAL DESIGN INTERVIEW QUESTIONS WILL HELP PREPARE
+
+EACH INTERVIEWER WILL ASK ME THESE
+5 core values
+humility
+grit
+ownership
+connection
+transparency
+
+MAKE SURE TO DESCRIBE CHALLENGES AT WORK AND ARTICULATE HOW YOU OVERCAME THEM
+
