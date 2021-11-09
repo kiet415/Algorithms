@@ -1,0 +1,53 @@
+SCALABILITY
+    Scalability is the capability of a system, process, or a network 
+    to grow and manage increased demand. Any distributed system that 
+    can continuously evolve in order to support the growing amount of 
+    work is considered to be scalable.
+
+    A system may have to scale because of many reasons like increased 
+    data volume or increased amount of work, e.g., number of transactions. 
+    A scalable system would like to achieve this scaling without performance loss.
+
+HORIZONTAL SCALING - add more servers to the pool of resrouces
+VERTICAL SCALING - adding more power (CPU, RAM, Storage, etc.) to an existing server.
+
+RELIABILITY
+    By definition, reliability is the probability a system will fail in a given period. 
+    In simple terms, a distributed system is considered reliable if it keeps delivering 
+    its services even when one or several of its software or hardware components fail.
+
+    EXAMPLE
+    For instance, if a user has added an item to their shopping cart, the system is 
+    expected not to lose it. A reliable distributed system achieves this through 
+    redundancy of both the software components and data. If the server carrying 
+    the user’s shopping cart fails, another server that has the exact replica of 
+    the shopping cart should replace it.
+
+    Obviously, redundancy has a cost and a reliable system has to pay that to 
+    achieve such resilience for services by eliminating every single point of failure.
+
+AVAILABILITY
+ basically means how long over time the system can remain operational.
+
+
+LOAD BALANCING
+ helps to spread the traffic across a cluster of servers to improve 
+ responsiveness and availability of applications, websites or databases
+
+If a server is not available to take new requests or is not responding
+or has elevated error rate, LB will stop sending traffic to such a server.
+
+We can add LBs at three places:
+    Between the user and the web server
+    Between web servers and an internal platform layer, like application servers or cache servers
+    Between internal platform layer and database.
+
+DATA PARTITIONING
+ after a certain scale point, it is cheaper and more feasible to scale horizontally by adding more machines than to grow it vertically by adding beefier servers.
+
+REDUNDANCY V REPLICATION
+    we duplicate some critical components or functions of a system to increase
+    reliablity of the system in some form of a backup or fail-safe, as in if you
+    have a file on server and you lose that serer, then you lose the file.
+
+In the presence of a network partition, a distributed system must choose either Consistency or Availability.

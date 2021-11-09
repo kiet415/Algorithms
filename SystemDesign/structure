@@ -1,0 +1,51 @@
+Reclarify requirements
+
+    functional 
+
+
+    non functional requirements
+        RELIABILITY(measures intended function for a specific interval without
+        failure) or AVAILIBILITY (measures ability of piece to operated if needed)
+        SCALIBILITY
+        
+        DATA STORAGE
+
+    Backend stuff (sql or no sql)
+        Go in to schema
+
+
+            id, (key, data types)
+            user_id , (foreign key, int)
+
+    SYSTEM APIs
+        /reserve
+        params : garage_id, start_time, end_time
+        returns : spot_id, reserveration_id
+
+
+    HIGH LEVLE ARCHITECTURE
+        client goes on 
+
+        web browser/phone app
+        
+        goes to backend server
+            writes to 
+                have a database, usually postgresql/mysql for relational database
+            reads to
+                
+                multiple servers for the DB, multiple which is redundant but it helps
+                securee the reliaiblity just in case anything gets lost if a server
+                is down.
+
+                have a load balancer between those in order to help spread traffic
+                acrss a cluster of servers to improve responsivenes and AVAILIBILITY
+                of the DB's. so itll stop sending traffic to one server if its busy
+                or not responding and sends to other
+
+    DATA partition
+        horizontal - put different rows into different tables,
+            ex) one table that stores zipcodes with <40000
+                other  table with zipcodes > 40000
+
+        vertical - divide data to store datas related to sepcific features in own server
+            
