@@ -1,7 +1,13 @@
 Reclarify requirements
 
     functional 
-
+        be able to input their data to check their driving records
+        also check other "rules" like violations, and etc
+        be returned with report and a level of risk possibly
+        high reliability as users should be able to check for their records
+        backend should be able to filter the users from the rules
+        be able to modify rules if needed
+        RELIABILITY since users will probably use it like once every few months or something
 
     non functional requirements
         RELIABILITY(measures intended function for a specific interval without
@@ -9,7 +15,8 @@ Reclarify requirements
         SCALIBILITY
         
         DATA STORAGE
-
+            HOW BIG STORAGE IS NEEDED, etc
+            
     Backend stuff (sql or no sql)
         Go in to schema
 
@@ -17,11 +24,29 @@ Reclarify requirements
             id, (key, data types)
             user_id , (foreign key, int)
 
-    SYSTEM APIs
-        /reserve
-        params : garage_id, start_time, end_time
-        returns : spot_id, reserveration_id
+            USER table, user id
+            name, sex, address, 94132
+            license number, class, expiration date, RULES_ID
 
+            rules table
+            dui, fines, traffic violations, criminal records
+
+            VIOLATION tables  INTs
+            USER_ID , duis , fines, suspensions BOOLEAN, traffic violations 
+
+            user_result
+            user_id, company_id, RULES, result - approved or not, LAST_CHECKEd - date
+            user_id, company_id, 
+
+    SYSTEM APIs
+        /update_rules
+            params(name, threshold)
+        /check_user
+            params(name, address, sex, birthdate, license #, rules)
+            RETURNS(RESULT for users with rules)
+        /check_records
+            params(name, companyId)
+            RETURNS(RESULT WITH DIFFERENT RULES IF AVAIL)
 
     HIGH LEVLE ARCHITECTURE
         client goes on 
@@ -43,6 +68,9 @@ Reclarify requirements
                 or not responding and sends to other
 
     DATA partition
+        Horizontal Partitioning is also known as Data Sharding.
+        The key problem with this approach is that if the value whose range is used for 
+        Partitioning isn’t chosen carefully, then the partitioning scheme will lead to unbalanced servers.
         horizontal - put different rows into different tables,
             ex) one table that stores zipcodes with <40000
                 other  table with zipcodes > 40000
