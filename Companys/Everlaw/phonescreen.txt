@@ -1,0 +1,27 @@
+What is a hash map? What are the time complexities for common operations 
+performed on a hash map?
+A hash map is a hash table based implementation of a map which is a array like data
+structure that can map keys to values
+
+Hash table uses a hash function to compute an index( or hash code) to put
+into an array of buckets/slots
+Ideally, the hash function will assign each key to a unique bucket, 
+but most hash table designs employ an imperfect hash function that causes collisions
+
+Keys could have different hash codes but be stored at the same index
+which causes COLLISIONS
+1 way to resolve a collision is CHAINING
+ store them in a linked list
+
+
+Given a list of elements, describe the algorithm to return the first occurrence 
+of each unique element. Follow up question was to return the k-most frequent 
+elements from the list.
+
+Given a list of N elements (non-unique), how you you return (while maintaining 
+order) a list of only the first appearance of each element.
+
+How can you determine if a 64-bit integer is a power of two.
+
+Given an acyclic directed graph, find the longest path. 
+Follow up question was to optimize.
